@@ -1,4 +1,4 @@
-# musicolor1
+# amstar2
 The package creates a barplot for the AMSTAR checklist.
 
 ## Overview
