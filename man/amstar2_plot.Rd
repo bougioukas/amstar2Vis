@@ -4,10 +4,12 @@
 \alias{amstar2_plot}
 \title{Plots the AMSTAR plot}
 \usage{
-amstar2_plot(data = data)
+amstar2_plot(data = data, fontsize = 3.5)
 }
 \arguments{
 \item{data}{A dataset.}
+
+\item{fontsize}{A number which controls the aesthetic of font size of the percentages in the bars.}
 }
 \value{
 amstar2_plot

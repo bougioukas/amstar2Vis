@@ -4,6 +4,8 @@
 #'
 #' @param data A dataset.
 #'
+#' @param fontsize A number which controls the aesthetic of font size of the percentages in the bars.
+#'
 #' @return amstar2_plot
 #'
 #' @export
@@ -11,7 +13,9 @@
 #' @examples
 
 
-amstar2_plot <- function(data = data){
+amstar2_plot <- function(data = data, fontsize = 3.5){
+
+  c(missing(fontsize))
 
   data <- data[, -1]
   amstar2_items <- stats::na.omit(data)
@@ -44,7 +48,7 @@ amstar2_plot <- function(data = data){
 
 amstar_barplot <- ggplot2::ggplot(amstar2_barplot, ggplot2::aes(x = prop, y = forcats::fct_rev(item), fill = forcats::fct_rev(assessment))) +
   ggplot2::geom_col(position = "fill", width = 0.8) +
-  ggplot2::geom_text(ggplot2::aes(label = paste0(round(prop, digits = 3)*100,"%")), size = 3.5,
+  ggplot2::geom_text(ggplot2::aes(label = paste0(round(prop, digits = 3)*100,"%")), size = fontsize,
               color="white",
               position = ggplot2::position_stack(vjust = 0.5)) +
   ggplot2::labs(x = paste0("Percentage of SRs (%), N=",  nrow(amstar2_items)),
