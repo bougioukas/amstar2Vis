@@ -41,15 +41,18 @@ amstar2_plot <- function(data = data, fontsize = 3.5, fontcolor = "white", colwi
   amstar2_items_long$assessment <- factor(amstar2_items_long$assessment,
                                      levels = c("Yes", "Partial Yes", "No", "Not Applicable"))
 
-
+# generate the percentages
   amstar2_barplot <- amstar2_items_long |>
     dplyr::group_by(item, assessment) |>
     dplyr::summarise(n = dplyr::n()) |>
     dplyr::mutate(prop = n/sum(n)) |>
     dplyr::ungroup()
 
+# create a a color palette with four distinct colors
+colpalette <- c("#999999" , "#ffcf20FF",  "#20908C", "#3a5e8cFF")
 
 
+# create the ggplot
 amstar_barplot <- ggplot2::ggplot(amstar2_barplot, ggplot2::aes(x = prop, y = forcats::fct_rev(item), fill = forcats::fct_rev(assessment))) +
   ggplot2::geom_col(position = "fill", width = colwidth) +
   ggplot2::geom_text(ggplot2::aes(label = paste0(round(prop, digits = 3)*100,"%")), size = fontsize,
@@ -57,7 +60,7 @@ amstar_barplot <- ggplot2::ggplot(amstar2_barplot, ggplot2::aes(x = prop, y = fo
               position = ggplot2::position_stack(vjust = 0.5)) +
   ggplot2::labs(x = paste0("Percentage of SRs (%), N=",  nrow(amstar2_items)),
                 y = "Items of AMSTAR 2 checklist") +
-  ggplot2::scale_fill_manual(values = c("#999999" , "#ffcf20FF",  "#20908C", "#3a5e8cFF")) +
+  ggplot2::scale_fill_manual(values = colpalette) +
   ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = "Rating")) +
   ggplot2::scale_x_continuous(labels = scales::percent, n.breaks = 10) +
   ggplot2::theme(panel.grid.minor = ggplot2::element_blank(),
