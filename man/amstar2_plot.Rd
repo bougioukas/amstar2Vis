@@ -4,12 +4,16 @@
 \alias{amstar2_plot}
 \title{Plots the AMSTAR plot}
 \usage{
-amstar2_plot(data = data, fontsize = 3.5)
+amstar2_plot(data = data, fontsize = 3.5, fontcolor = "white", colwidth = 0.8)
 }
 \arguments{
 \item{data}{A dataset.}
 
-\item{fontsize}{A number which controls the aesthetic of font size of the percentages in the bars.}
+\item{fontsize}{A number that controls the aesthetic of font size of the percentages in the bars. Default is fontsize = 3.5 .}
+
+\item{fontcolor}{A color that controls the aesthetic of color of the percentages in the bars. Default is fontcolor = "white".}
+
+\item{colwidth}{A number that controls the width between the bars. Default is colwidth = 0.8 .}
 }
 \value{
 amstar2_plot

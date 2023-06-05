@@ -4,7 +4,11 @@
 #'
 #' @param data A dataset.
 #'
-#' @param fontsize A number which controls the aesthetic of font size of the percentages in the bars.
+#' @param fontsize A number that controls the aesthetic of font size of the percentages in the bars. Default is fontsize = 3.5 .
+#'
+#' @param fontcolor A color that controls the aesthetic of color of the percentages in the bars. Default is fontcolor = "white".
+#'
+#' @param colwidth A number that controls the width between the bars. Default is colwidth = 0.8 .
 #'
 #' @return amstar2_plot
 #'
@@ -13,9 +17,9 @@
 #' @examples
 
 
-amstar2_plot <- function(data = data, fontsize = 3.5){
+amstar2_plot <- function(data = data, fontsize = 3.5, fontcolor = "white", colwidth = 0.8){
 
-  c(missing(fontsize))
+  c(missing(fontsize), missing(fontcolor), missing(colwidth))
 
   data <- data[, -1]
   amstar2_items <- stats::na.omit(data)
@@ -47,23 +51,23 @@ amstar2_plot <- function(data = data, fontsize = 3.5){
 
 
 amstar_barplot <- ggplot2::ggplot(amstar2_barplot, ggplot2::aes(x = prop, y = forcats::fct_rev(item), fill = forcats::fct_rev(assessment))) +
-  ggplot2::geom_col(position = "fill", width = 0.8) +
+  ggplot2::geom_col(position = "fill", width = colwidth) +
   ggplot2::geom_text(ggplot2::aes(label = paste0(round(prop, digits = 3)*100,"%")), size = fontsize,
-              color="white",
+              color = fontcolor,
               position = ggplot2::position_stack(vjust = 0.5)) +
   ggplot2::labs(x = paste0("Percentage of SRs (%), N=",  nrow(amstar2_items)),
-         y = "Items of AMSTAR 2 checklist") +
+                y = "Items of AMSTAR 2 checklist") +
   ggplot2::scale_fill_manual(values = c("#999999" , "#ffcf20FF",  "#20908C", "#3a5e8cFF")) +
   ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = "Rating")) +
   ggplot2::scale_x_continuous(labels = scales::percent, n.breaks = 10) +
   ggplot2::theme(panel.grid.minor = ggplot2::element_blank(),
           panel.background = ggplot2::element_blank(),
-          axis.text = ggplot2::element_text(size=12),
+          axis.text = ggplot2::element_text(size = 12),
           axis.title.x = ggplot2::element_text(size = 14, vjust = -0.75),
           axis.title.y = ggplot2::element_text(size = 14, vjust = +0.8),
           legend.position = "bottom",
           legend.text = ggplot2::element_text(size = 12),
-          legend.title = ggplot2::element_text(size = 12, face = "bold", margin = ggplot2::margin(0,50,0,0)),
+          legend.title = ggplot2::element_text(size = 12, face = "bold", margin = ggplot2::margin(0, 50, 0, 0)),
           legend.key.size = grid::unit(0.6, "cm"))
 
   return(amstar_barplot)
