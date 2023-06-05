@@ -4,7 +4,7 @@
 \alias{amstar2_plot}
 \title{Plots the AMSTAR plot}
 \usage{
-amstar2_plot(data = data, fontsize = 3.5, fontcolor = "white", colwidth = 0.8)
+amstar2_plot(data = data, fontsize = 3.5, fontcolor = "white", barwidth = 0.8)
 }
 \arguments{
 \item{data}{A dataset.}
@@ -13,7 +13,7 @@ amstar2_plot(data = data, fontsize = 3.5, fontcolor = "white", colwidth = 0.8)
 
 \item{fontcolor}{A color that controls the aesthetic of color of the percentages in the bars. Default is fontcolor = "white".}
 
-\item{colwidth}{A number that controls the width between the bars. Default is colwidth = 0.8 .}
+\item{barwidth}{A number that controls the width between the bars. Default is barwidth = 0.8 .}
 }
 \value{
 amstar2_plot

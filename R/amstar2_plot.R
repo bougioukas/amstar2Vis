@@ -8,7 +8,7 @@
 #'
 #' @param fontcolor A color that controls the aesthetic of color of the percentages in the bars. Default is fontcolor = "white".
 #'
-#' @param colwidth A number that controls the width between the bars. Default is colwidth = 0.8 .
+#' @param barwidth A number that controls the width between the bars. Default is barwidth = 0.8 .
 #'
 #' @return amstar2_plot
 #'
@@ -17,9 +17,9 @@
 #' @examples
 
 
-amstar2_plot <- function(data = data, fontsize = 3.5, fontcolor = "white", colwidth = 0.8){
+amstar2_plot <- function(data = data, fontsize = 3.5, fontcolor = "white", barwidth = 0.8){
 
-  c(missing(fontsize), missing(fontcolor), missing(colwidth))
+  c(missing(fontsize), missing(fontcolor), missing(barwidth))
 
   data <- data[, -1]
   amstar2_items <- stats::na.omit(data)
@@ -54,7 +54,7 @@ colpalette <- c("#999999" , "#ffcf20FF",  "#20908C", "#3a5e8cFF")
 
 # create the ggplot
 amstar_barplot <- ggplot2::ggplot(amstar2_barplot, ggplot2::aes(x = prop, y = forcats::fct_rev(item), fill = forcats::fct_rev(assessment))) +
-  ggplot2::geom_col(position = "fill", width = colwidth) +
+  ggplot2::geom_col(position = "fill", width = barwidth) +
   ggplot2::geom_text(ggplot2::aes(label = paste0(round(prop, digits = 3)*100,"%")), size = fontsize,
               color = fontcolor,
               position = ggplot2::position_stack(vjust = 0.5)) +
