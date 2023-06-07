@@ -63,7 +63,7 @@ colpalette <- c("#999999" , "#ffcf20FF",  "#20908C", "#3a5e8cFF")
 # create the ggplot
 amstar_plot <- ggplot2::ggplot(amstar2_proportions, ggplot2::aes(x = prop, y = forcats::fct_rev(item), fill = forcats::fct_rev(assessment))) +
   ggplot2::geom_col(position = "fill", width = barwidth) +
-  ggplot2::geom_text(ggplot2::aes(label = round(prop, digits = 3)*100), size = fontsize,
+  ggplot2::geom_text(ggplot2::aes(label = paste0(round(prop, digits = 3)*100,"%")), size = fontsize,
               color = fontcolor,
               position = ggplot2::position_stack(vjust = 0.5)) +
   ggplot2::labs(x = paste0("Percentage of SRs (%), N=",  nrow(amstar2_data)),
