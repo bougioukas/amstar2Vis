@@ -17,7 +17,6 @@ amstar2_donut <- function(data = data, r1 = 1, r2 = 0.75){
 
   c(missing(r1), missing(r2))
 
-
   tb <- amstar2_table(data)
 
   df <- tb |>
