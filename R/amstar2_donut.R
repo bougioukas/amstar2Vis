@@ -35,7 +35,7 @@ amstar2_donut <- function(data = data, r1 = 1, r2 = 0.75){
 
   donut <- df |>
     ggplot2::ggplot() +
-    ggtricks::geom_donut_slice(aes(cat = forcats::fct_rev(overall), val = n, fill = forcats::fct_rev(overall)),
+    ggtricks::geom_donut_slice(ggplot2::aes(cat = forcats::fct_rev(overall), val = n, fill = forcats::fct_rev(overall)),
                                r1 = r1, r2 = r2,
                                slice_angle = 180) +
     ggplot2::coord_equal() +
