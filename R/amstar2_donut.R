@@ -42,7 +42,7 @@ amstar2_donut <- function(data = data, r1 = 1, r2 = 0.75){
     ggplot2::scale_fill_manual(values = categories_fills) +
     ggthemes::theme_fivethirtyeight(base_size = 14) +
     ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = "Rating")) +
-    theme(axis.text = ggplot2::element_blank(),
+    ggplot2::theme(axis.text = ggplot2::element_blank(),
           panel.grid.major = ggplot2::element_blank(),
           legend.position = c(0.5, 0.25),
           legend.text = ggplot2::element_text(size = 14),
