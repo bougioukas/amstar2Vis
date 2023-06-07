@@ -19,17 +19,26 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){
 
   tb <- amstar2_table(data)
 
+  tb$overall <- factor(tb$overall, levels = c("Critically Low", "Low", "Moderate", "High"))
+
+
   df <- tb |>
     dplyr::select(overall) |>
     dplyr::count(overall)
-
-  df$overall <- factor(df$overall, levels = c("Critically Low", "Low", "Moderate", "High"))
 
 
   categories_fills <- c("Critically Low" = "#FFCD00",
                         "Low" = "#FFE8AE",
                         "Moderate" = "#B4CFEE",
                         "High" = "#004B87")
+
+
+  dt1 <- tb |>
+    dplyr::select(overall) |>
+    dplyr::count(overall) |>
+    dplyr::mutate(percentage = round(n/sum(n)*100, digits = 1))
+
+  dt2 <- gridExtra::tableGrob(dt1)
 
 
   halfdonut <- df |>
@@ -46,8 +55,10 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){
           legend.position = c(0.5, 0.25),
           legend.text = ggplot2::element_text(size = 14),
           legend.title = ggplot2::element_text(size = 14, face = "bold"),
-          legend.key.size = grid::unit(0.8, "cm"))
-
+          legend.key.size = grid::unit(0.8, "cm")) +
+    ggplot2::annotation_custom(dt2,
+                               xmin = -1.0, ymin = -0.15,
+                               xmax = 1)
 
   return(halfdonut)
 
