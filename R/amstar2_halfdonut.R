@@ -36,7 +36,9 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){
   dt1 <- tb |>
     dplyr::select(overall) |>
     dplyr::count(overall) |>
-    dplyr::mutate(percentage = round(n/sum(n)*100, digits = 1))
+    dplyr::mutate(percentage = round(n/sum(n)*100, digits = 1)) |>
+    dplyr::rename("Overall quality" = "overall",
+                  "No. reviews" = "n")
 
   dt2 <- gridExtra::tableGrob(dt1)
 
