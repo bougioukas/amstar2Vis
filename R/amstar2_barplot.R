@@ -1,4 +1,4 @@
-#' @title Plots the AMSTAR plot
+#' @title Plots the AMSTAR barplot
 #'
 #' @description This function plots the AMSTAR bar plot.
 #'
@@ -10,7 +10,7 @@
 #'
 #' @param barwidth A number that controls the width between the bars. Default is barwidth = 0.8 .
 #'
-#' @return amstar2_barplot
+#' @return amstar_plot
 #'
 #' @export
 #'

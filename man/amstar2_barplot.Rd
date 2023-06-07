@@ -2,7 +2,7 @@
 % Please edit documentation in R/amstar2_barplot.R
 \name{amstar2_barplot}
 \alias{amstar2_barplot}
-\title{Plots the AMSTAR plot}
+\title{Plots the AMSTAR barplot}
 \usage{
 amstar2_barplot(
   data = data,
@@ -21,7 +21,7 @@ amstar2_barplot(
 \item{barwidth}{A number that controls the width between the bars. Default is barwidth = 0.8 .}
 }
 \value{
-amstar2_barplot
+amstar_plot
 }
 \description{
 This function plots the AMSTAR bar plot.
