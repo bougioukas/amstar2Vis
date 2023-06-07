@@ -1,0 +1,32 @@
+#' Data for the amstar2 package
+#'
+#' Contains 495 systematic review assessments.
+#'
+#'@format A dataframe.
+#' \describe{
+#'    \item{review}{The reviews}
+#'    \item{Item1}{Item 1}
+#'    \item{Item2}{Item 2}
+#'    \item{Item3}{Item 3}
+#'    \item{Item4}{Item 4}
+#'    \item{Item5}{Item 5}
+#'    \item{Item6}{Item 6}
+#'    \item{Item7}{Item 7}
+#'    \item{Item8}{Item 8}
+#'    \item{Item9}{Item 9}
+#'    \item{Item10}{Item 10}
+#'    \item{Item11}{Item 11}
+#'    \item{Item12}{Item 12}
+#'    \item{Item13}{Item 13}
+#'    \item{Item14}{Item 14}
+#'    \item{Item15}{Item 15}
+#'    \item{Item16}{Item 16}
+#' }
+#'
+#' @source {Data from a paper}
+#'
+#' @examples
+#' data(dat)
+"dat"
+
+

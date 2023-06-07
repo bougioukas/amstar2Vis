@@ -36,11 +36,11 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){
   dt1 <- tb |>
     dplyr::select(overall) |>
     dplyr::count(overall) |>
-    dplyr::mutate(percentage = round(n/sum(n)*100, digits = 1)) |>
+    dplyr::mutate("Percentage (%)" = round(n/sum(n)*100, digits = 1)) |>
     dplyr::rename("Overall quality" = "overall",
                   "No. reviews" = "n")
 
-  dt2 <- gridExtra::tableGrob(dt1)
+  dt2 <- gridExtra::tableGrob(t(dt1))
 
 
   halfdonut <- df |>
@@ -54,12 +54,12 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){
     ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = "Rating")) +
     ggplot2::theme(axis.text = ggplot2::element_blank(),
           panel.grid.major = ggplot2::element_blank(),
-          legend.position = c(0.5, 0.25),
+          legend.position = c(0.5, 0.45),
           legend.text = ggplot2::element_text(size = 14),
           legend.title = ggplot2::element_text(size = 14, face = "bold"),
           legend.key.size = grid::unit(0.8, "cm")) +
     ggplot2::annotation_custom(dt2,
-                               xmin = -1.0, ymin = -0.15,
+                               xmin = -1.05, ymin = -0.65,
                                xmax = 1)
 
   return(halfdonut)

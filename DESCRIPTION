@@ -7,7 +7,7 @@ Maintainer: Konstantinos Bougioukas <mpougioukas@auth.gr>
 Description: Plots the AMSTAR barplot.
 License: GPL-2
 Encoding: UTF-8
-LazyData: FALSE
+LazyData: TRUE
 Imports: 
     ggplot2,
     tidyr,

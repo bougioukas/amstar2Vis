@@ -10,7 +10,6 @@
 #'
 #' @examples
 
-
 amstar2_table <- function(data = data){
 
   data <- data[, -1]
