@@ -1,4 +1,4 @@
-#' @title Plots the AMSTAR donut plot.
+#' @title Plots the AMSTAR halfdonut plot.
 #'
 #' @param data A dataset.
 #'
@@ -6,14 +6,14 @@
 #'
 #' @param r2 Inner circle radius, should inferior  to `r1` value.
 #'
-#' @return donut
+#' @return halfdonut
 #'
 #' @export
 #'
 #' @examples
 
 
-amstar2_donut <- function(data = data, r1 = 1, r2 = 0.75){
+amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){
 
   c(missing(r1), missing(r2))
 
@@ -32,7 +32,7 @@ amstar2_donut <- function(data = data, r1 = 1, r2 = 0.75){
                         "High" = "#004B87")
 
 
-  donut <- df |>
+  halfdonut <- df |>
     ggplot2::ggplot() +
     ggtricks::geom_donut_slice(ggplot2::aes(cat = forcats::fct_rev(overall), val = n, fill = forcats::fct_rev(overall)),
                                r1 = r1, r2 = r2,
@@ -49,6 +49,6 @@ amstar2_donut <- function(data = data, r1 = 1, r2 = 0.75){
           legend.key.size = grid::unit(0.8, "cm"))
 
 
-  return(donut)
+  return(halfdonut)
 
 }
