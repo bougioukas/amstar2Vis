@@ -4,7 +4,7 @@
 #'
 #' @param data A dataset.
 #'
-#' @return amstar2_data
+#' @return amstar_table
 #'
 #' @export
 #'
@@ -12,8 +12,9 @@
 
 amstar2_table <- function(data = data){
 
-  data <- data[, -1]
-  amstar2_data <- stats::na.omit(data)
+  data <- data
+  amstar2_data <- data[, -1]
+  amstar2_data <- stats::na.omit(amstar2_data)
 
 
   label <- c("1. PICO components",
@@ -80,10 +81,8 @@ amstar2_table <- function(data = data){
 
   }
 
+  amstar_table <- tibble::tibble(review = data$review, amstar2_data, overall)
 
-  # Insert the new column into the dataset
-  amstar2_data$overall <- overall
-
-  return(amstar2_data)
+  return(amstar_table)
 
 }

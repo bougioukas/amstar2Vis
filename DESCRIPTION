@@ -10,6 +10,7 @@ Encoding: UTF-8
 LazyData: TRUE
 Imports: 
     ggplot2,
+    tibble,
     tidyr,
     dplyr,
     forcats,

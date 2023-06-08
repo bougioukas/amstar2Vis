@@ -10,7 +10,7 @@ amstar2_table(data = data)
 \item{data}{A dataset.}
 }
 \value{
-amstar2_data
+amstar_table
 }
 \description{
 This function adds the overall assessment.

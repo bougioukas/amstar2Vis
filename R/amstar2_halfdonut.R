@@ -22,17 +22,16 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){
   tb$overall <- factor(tb$overall, levels = c("Critically Low", "Low", "Moderate", "High"))
 
 
-  df <- tb |>
+  dt <- tb |>
     dplyr::select(overall) |>
     dplyr::count(overall)
 
 
-  categories_fills <- c("Critically Low" = "#FFCD00",
-                        "Low" = "#FFE8AE",
-                        "Moderate" = "#B4CFEE",
-                        "High" = "#004B87")
+  categories_fills <- c("Critically Low" = "#FFCD00", "Low" = "#FFE8AE",
+                        "Moderate" = "#B4CFEE", "High" = "#004B87")
 
 
+# create a table with the number of reviews and their percentages
   dt1 <- tb |>
     dplyr::select(overall) |>
     dplyr::count(overall) |>
@@ -40,10 +39,11 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){
     dplyr::rename("Overall quality" = "overall",
                   "No. reviews" = "n")
 
+# reformat the table
   dt2 <- gridExtra::tableGrob(t(dt1))
 
 
-  halfdonut <- df |>
+  halfdonut <- dt |>
     ggplot2::ggplot() +
     ggtricks::geom_donut_slice(ggplot2::aes(cat = forcats::fct_rev(overall), val = n, fill = forcats::fct_rev(overall)),
                                r1 = r1, r2 = r2,
