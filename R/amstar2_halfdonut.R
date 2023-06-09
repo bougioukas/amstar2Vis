@@ -19,16 +19,16 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){
 
   tb <- amstar2_table(data)
 
+# order the categories of assessment
   tb$overall <- factor(tb$overall, levels = c("Critically Low", "Low", "Moderate", "High"))
-
 
   dt <- tb |>
     dplyr::select(overall) |>
     dplyr::count(overall)
 
 
-  categories_fills <- c("Critically Low" = "#FFCD00", "Low" = "#FFE8AE",
-                        "Moderate" = "#B4CFEE", "High" = "#004B87")
+# create a a color palette with four distinct colors corresponding to each category
+  categories_fills <- c("Critically Low" = "#FFCD00", "Low" = "#FFE8AE", "Moderate" = "#B4CFEE", "High" = "#004B87")
 
 
 # create a table with the number of reviews and their percentages
@@ -36,7 +36,7 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){
     dplyr::select(overall) |>
     dplyr::count(overall) |>
     dplyr::mutate("Percentage (%):" = round(n/sum(n)*100, digits = 1)) |>
-    dplyr::rename("Overall quality:" = "overall",
+    dplyr::rename("*Overall quality:" = "overall",
                   "Number of reviews:" = "n")
 
 # reformat the table
@@ -51,13 +51,15 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){
     ggplot2::coord_equal() +
     ggplot2::scale_fill_manual(values = categories_fills) +
     ggthemes::theme_fivethirtyeight(base_size = 14) +
-    ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = "Rating")) +
-    ggplot2::theme(axis.text = ggplot2::element_blank(),
-          panel.grid.major = ggplot2::element_blank(),
-          legend.position = c(0.5, 0.15),
-          legend.text = ggplot2::element_text(size = 14),
-          legend.title = ggplot2::element_text(size = 14, face = "bold"),
-          legend.key.size = grid::unit(0.8, "cm")) +
+    ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = paste0("Rating, N=",  nrow(tb)))) +
+    ggplot2::labs(caption = "*Critically Low/Low/Moderate/High based on 7 critical items according to AMSTAR 2 rating scheme \nhttp://dx.doi.org/10.1136/bmj.j4008") +
+    ggplot2::theme(plot.caption = ggplot2::element_text(hjust = 0.5, size = 12, face = "italic"),
+                   axis.text = ggplot2::element_blank(),
+                   panel.grid.major = ggplot2::element_blank(),
+                   legend.position = c(0.5, 0.15),
+                   legend.text = ggplot2::element_text(size = 14),
+                   legend.title = ggplot2::element_text(size = 14, face = "bold"),
+                   legend.key.size = grid::unit(0.8, "cm")) +
     ggplot2::annotation_custom(dt2,
                                xmin = -1.05, ymin = -0.35,
                                xmax = 1)

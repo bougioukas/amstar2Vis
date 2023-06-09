@@ -6,7 +6,7 @@
 #'
 #' @return amstar_table
 #'
-#' @example man/examples/example1.R
+#' @example man/examples/example0.R
 #'
 #' @export
 
@@ -14,24 +14,24 @@
 amstar2_table <- function(data = data){
 
   data <- stats::na.omit(data)
-  colnames(data)[1] ="reviews"
+  colnames(data)[1] <- "reviews"
   amstar2_data <- data[, -1]
 
   label <- c("1. PICO components",
-             "2. Preestablished protocol",
+             "2.* Preestablished protocol",
              "3. Explanation of inlcuded studies' design",
-             "4. Comprehensive search strategy",
+             "4.* Comprehensive search strategy",
              "5. Duplicate study selection",
              "6. Duplicate data extraction",
-             "7. List of excluded studies and justification",
+             "7.* List of excluded studies and justification",
              "8. Description of included studies",
-             "9. Risk of bias (RoB) assessment",
+             "9.* Risk of bias (RoB) assessment",
              "10. Funding sources",
-             "11. Use of appropriate statistical methods",
+             "11.* Use of appropriate statistical methods",
              "12. RoB impact on synthesized results",
-             "13. Results interpretation with RoB reference",
+             "13.* Results interpretation with RoB reference",
              "14. Heterogeneity explanation",
-             "15. Publication/ small study bias investigation",
+             "15.* Publication/ small study bias investigation",
              "16. Conflict of interest declaration")
 
   names(amstar2_data) <- label
@@ -82,6 +82,7 @@ amstar2_table <- function(data = data){
   }
 
   amstar_table <- tibble::tibble(reviews = data$reviews, amstar2_data, overall)
+
 
   return(amstar_table)
 
