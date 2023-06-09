@@ -6,7 +6,7 @@
 #'
 #' @return amstar_table
 #'
-#' @example man/inst/examples/example1.R
+#' @example man/examples/example1.R
 #'
 #' @export
 

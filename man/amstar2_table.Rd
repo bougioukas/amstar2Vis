@@ -15,3 +15,8 @@ amstar_table
 \description{
 This function adds the overall assessment.
 }
+\examples{
+DATASET <- readxl::read_excel(system.file("extdata", "dat.xlsx", package = "amstar2"))
+
+tb <- amstar2_table(DATASET)
+}

@@ -26,3 +26,8 @@ amstar_plot
 \description{
 This function plots the AMSTAR bar plot.
 }
+\examples{
+DATASET <- readxl::read_excel(system.file("extdata", "dat.xlsx", package = "amstar2"))
+
+amstar2_barplot(DATASET)
+}

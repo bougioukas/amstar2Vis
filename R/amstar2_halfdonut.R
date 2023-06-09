@@ -8,7 +8,7 @@
 #'
 #' @return halfdonut
 #'
-#' @example man/inst/examples/example3.R
+#' @example man/examples/example3.R
 #'
 #' @export
 

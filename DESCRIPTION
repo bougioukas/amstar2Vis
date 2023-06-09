@@ -18,7 +18,8 @@ Imports:
     grid,
     ggthemes,
     ggtricks,
-    gridExtra
+    gridExtra,
+    readxl
 RoxygenNote: 7.2.3
 Depends: 
     R (>= 2.10)

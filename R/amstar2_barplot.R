@@ -12,7 +12,7 @@
 #'
 #' @return amstar_plot
 #'
-#' @example man/inst/examples/example2.R
+#' @example man/examples/example2.R
 #'
 #' @export
 
