@@ -1,10 +1,10 @@
-#' Data for the amstar2 package
+#' @title Data for the amstar2 package
 #'
-#' Contains 495 systematic review assessments.
+#' @description Contains 495 systematic review assessments.
 #'
-#'@format A dataframe.
+#' @format A dataframe.
 #' \describe{
-#'    \item{review}{The reviews}
+#'    \item{review}{reviews}
 #'    \item{Item1}{Item 1}
 #'    \item{Item2}{Item 2}
 #'    \item{Item3}{Item 3}
@@ -28,5 +28,4 @@
 #' @examples
 #' data(dat)
 "dat"
-
 

@@ -7,7 +7,7 @@
 \format{
 A dataframe.
 \describe{
-   \item{review}{The reviews}
+   \item{review}{reviews}
    \item{Item1}{Item 1}
    \item{Item2}{Item 2}
    \item{Item3}{Item 3}

@@ -6,16 +6,16 @@
 #'
 #' @return amstar_table
 #'
-#' @export
+#' @example man/inst/examples/example1.R
 #'
-#' @examples
+#' @export
+
 
 amstar2_table <- function(data = data){
 
-  data <- data
+  data <- stats::na.omit(data)
+  colnames(data)[1] ="reviews"
   amstar2_data <- data[, -1]
-  amstar2_data <- stats::na.omit(amstar2_data)
-
 
   label <- c("1. PICO components",
              "2. Preestablished protocol",
@@ -81,7 +81,7 @@ amstar2_table <- function(data = data){
 
   }
 
-  amstar_table <- tibble::tibble(review = data$review, amstar2_data, overall)
+  amstar_table <- tibble::tibble(reviews = data$reviews, amstar2_data, overall)
 
   return(amstar_table)
 

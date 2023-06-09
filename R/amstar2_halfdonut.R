@@ -8,9 +8,9 @@
 #'
 #' @return halfdonut
 #'
-#' @export
+#' @example man/inst/examples/example3.R
 #'
-#' @examples
+#' @export
 
 
 amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75){

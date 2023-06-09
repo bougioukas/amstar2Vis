@@ -12,17 +12,17 @@
 #'
 #' @return amstar_plot
 #'
-#' @export
+#' @example man/inst/examples/example2.R
 #'
-#' @examples
+#' @export
 
 
 amstar2_barplot <- function(data = data, fontsize = 3.5, fontcolor = "white", barwidth = 0.8){
 
   c(missing(fontsize), missing(fontcolor), missing(barwidth))
 
-  data <- data[, -1]
-  amstar2_data <- stats::na.omit(data)
+  data <- stats::na.omit(data)
+  amstar2_data <- data[, -1]
 
   label <- c("1. PICO components",
              "2. Preestablished protocol",
