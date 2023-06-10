@@ -11,5 +11,5 @@ It creates tables and presents graphical visualizations of the assessment of sys
 
 ``` r
 # You can download the development version of the package from github:
-devtools::install_github('bougioukas/musicolor')
+devtools::install_github('bougioukas/amstar2')
 ```
