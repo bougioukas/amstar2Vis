@@ -14,11 +14,11 @@ amstar2_barplot(
 \arguments{
 \item{data}{A dataset.}
 
-\item{fontsize}{A number that controls the aesthetic of font size of the percentages in the bars. Default is fontsize = 3.5 .}
+\item{fontsize}{A number that controls the aesthetic of font size of the percentages in the bars. Default is `fontsize = 3.5`.}
 
-\item{fontcolor}{A color that controls the aesthetic of color of the percentages in the bars. Default is fontcolor = "white".}
+\item{fontcolor}{A color that controls the aesthetic of color of the percentages in the bars. Default is `fontcolor = "white"`.}
 
-\item{barwidth}{A number that controls the width between the bars. Default is barwidth = 0.8 .}
+\item{barwidth}{A number that controls the width between the bars. Default is `barwidth = 0.8`.}
 }
 \value{
 amstar_plot

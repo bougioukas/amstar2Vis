@@ -4,14 +4,24 @@
 \alias{amstar2_halfdonut}
 \title{Plots the AMSTAR halfdonut plot.}
 \usage{
-amstar2_halfdonut(data = data, r1 = 1, r2 = 0.75)
+amstar2_halfdonut(
+  data = data,
+  r1 = 1,
+  r2 = 0.75,
+  table_size = 14,
+  caption_size = 12
+)
 }
 \arguments{
 \item{data}{A dataset.}
 
-\item{r1}{Outer circle radius.}
+\item{r1}{Outer circle radius. Default is `r1 = 1`.}
 
-\item{r2}{Inner circle radius, should inferior  to `r1` value.}
+\item{r2}{Inner circle radius, should inferior  to `r1` value. Default is `r2 = 0.75`.}
+
+\item{table_size}{It controls the size of the inset table. Default is `table_size = 14`.}
+
+\item{caption_size}{It controls the font size of the caption. Default is `caption_size = 12`.}
 }
 \value{
 halfdonut

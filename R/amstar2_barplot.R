@@ -4,11 +4,11 @@
 #'
 #' @param data A dataset.
 #'
-#' @param fontsize A number that controls the aesthetic of font size of the percentages in the bars. Default is fontsize = 3.5 .
+#' @param fontsize A number that controls the aesthetic of font size of the percentages in the bars. Default is `fontsize = 3.5`.
 #'
-#' @param fontcolor A color that controls the aesthetic of color of the percentages in the bars. Default is fontcolor = "white".
+#' @param fontcolor A color that controls the aesthetic of color of the percentages in the bars. Default is `fontcolor = "white"`.
 #'
-#' @param barwidth A number that controls the width between the bars. Default is barwidth = 0.8 .
+#' @param barwidth A number that controls the width between the bars. Default is `barwidth = 0.8`.
 #'
 #' @return amstar_plot
 #'
