@@ -179,7 +179,25 @@ amstar_gtable <- amstar2_gt |>
   gt::cols_align(
     align = "center",
     columns = 2:18
-  )
+  ) |>
+  gt::tab_footnote(
+    footnote = "Critical item according to AMSTAR 2 rating scheme.",
+    gt::cells_column_labels(columns = 2:17)
+  ) |>
+  gt::tab_footnote(
+    footnote = "Critically Low/Low/Moderate/High based on the 7 critical items according to AMSTAR 2 rating scheme \nhttp://dx.doi.org/10.1136/bmj.j4008",
+    gt::cells_column_labels(columns = overall)
+  ) |>
+  gt::tab_style(
+    style = gt::cell_borders(
+      sides = c("left"),
+      color = "gray30",
+      weight = gt::px(5.0),
+      style = "solid"
+    ),
+    locations = gt::cells_body(columns = overall)
+  ) |>
+  gt::tab_options(column_labels.font.weight = "bold")
 
   return(amstar_gtable)
 
