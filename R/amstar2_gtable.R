@@ -85,7 +85,7 @@ amstar2_gtable <- function(data = data){
   # overall
   levels(amstar2_gt$overall) <- c("Critically Low", "Low", "Moderate", "High")
   amstar2_gt$overall <- factor(amstar2_gt$overall, levels = c("Critically Low", "Low", "Moderate", "High"))
-  categories_fills <- c("#FFCD00", "#FFE8AE", "#B4CFEE", "#004B87")
+  categories_fills <- c("#FD9567FF", "#FEC98DFF", "#9F2F7FFF", "#451077FF")
 
 
 # gt table
