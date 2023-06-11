@@ -13,3 +13,20 @@ It creates tables and presents graphical visualizations of the assessment of sys
 # You can download the development version of the package from github:
 devtools::install_github('bougioukas/amstar2')
 ```
+
+
+
+## AMSTAR 2 Table
+<img src="man/figures/amstar_table.PNG" align="center" width="620" />
+
+
+## AMSTAR 2 Barplot
+<img src="man/figures/amstar_barplot.PNG" align="center" width="620" />
+
+## AMSTAR 2 Halfdonut
+<img src="man/figures/amstar_table.PNG" align="center" width="620" />
+
+
+
+
+
