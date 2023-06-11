@@ -180,13 +180,13 @@ amstar_gtable <- amstar2_gt |>
     align = "center",
     columns = 2:18
   ) |>
-  gt::tab_footnote(footnote = "No MA, No meta-analysis conducted.") |>
+  gt::tab_footnote(footnote = "No MA: No meta-analysis conducted.") |>
   gt::tab_footnote(
-    footnote = "Critical item according to AMSTAR 2 rating scheme.",
-    gt::cells_column_labels(columns = 2:17)
+    footnote = "Critical domain based on AMSTAR 2.",
+    gt::cells_column_labels(columns = c(3, 5, 8, 10, 12, 14, 16))
   ) |>
   gt::tab_footnote(
-    footnote = "Critically Low/Low/Moderate/High quality according to AMSTAR 2 rating scheme. Source http://doi.org/10.1136/bmj.j4008",
+    footnote = "Critically Low/Low/Moderate/High quality according to AMSTAR 2 rating scheme.",
     gt::cells_column_labels(columns = overall)
   ) |>
   gt::tab_style(
