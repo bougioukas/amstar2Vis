@@ -24,7 +24,7 @@ devtools::install_github('bougioukas/amstar2')
 <img src="man/figures/amstar_barplot.png" align="center" width="620" />
 
 ## AMSTAR 2 Halfdonut
-<img src="man/figures/amstar_table.png" align="center" width="620" />
+<img src="man/figures/amstar_halfdonut.png" align="center" width="620" />
 
 
 
