@@ -17,14 +17,14 @@ devtools::install_github('bougioukas/amstar2')
 
 
 ## AMSTAR 2 Table
-<img src="man/figures/amstar_table.PNG" align="center" width="620" />
+<img src="man/figures/amstar_table.png" align="center" width="620" />
 
 
 ## AMSTAR 2 Barplot
-<img src="man/figures/amstar_barplot.PNG" align="center" width="620" />
+<img src="man/figures/amstar_barplot.png" align="center" width="620" />
 
 ## AMSTAR 2 Halfdonut
-<img src="man/figures/amstar_table.PNG" align="center" width="620" />
+<img src="man/figures/amstar_table.png" align="center" width="620" />
 
 
 
