@@ -2,7 +2,7 @@ Package: amstar2
 Type: Package
 Title: Plots the AMSTAR barplot
 Version: 0.1.0
-Author: Konstantinos Bougioukas
+Author: Konstantinos Bougioukas, Konstantinos Pamporis, Paschalis Karakasis 
 Maintainer: Konstantinos Bougioukas <mpougioukas@auth.gr>
 Description: Plots the AMSTAR barplot.
 License: GPL-2

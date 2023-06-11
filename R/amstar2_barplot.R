@@ -34,7 +34,7 @@ amstar2_barplot <- function(data = data, fontsize = 3.5, fontcolor = "white", ba
   amstar2_data_long$item <- factor(amstar2_data_long$item, levels= label)
 
 # order the categories of assessment
-  amstar2_data_long$assessment <- factor(amstar2_data_long$assessment, levels = c("Yes", "Partial Yes", "No", "Not Applicable"))
+  amstar2_data_long$assessment <- factor(amstar2_data_long$assessment, levels = c("Yes", "Partial Yes", "No", "No MA"))
 
 
 # generate the proportions
@@ -46,7 +46,7 @@ amstar2_barplot <- function(data = data, fontsize = 3.5, fontcolor = "white", ba
 
 
 # create a a color palette with four distinct colors corresponding to each category
-  colpalette <- c("Yes" = "#3a5e8cFF", "Partial Yes" = "#20908C", "No" = "#ffcf20FF", "Not Applicable" = "#999999")
+  colpalette <- c("Yes" = "#3a5e8cFF", "Partial Yes" = "#20908C", "No" = "#ffcf20FF", "No MA" = "#999999")
 
 
 # create the barplot
@@ -57,11 +57,11 @@ amstar_plot <- ggplot2::ggplot(amstar2_proportions, ggplot2::aes(x = prop, y = f
                      position = ggplot2::position_stack(vjust = 0.5)) +
   ggplot2::labs(x = paste0("Percentage of SRs (%), N=",  nrow(amstar2_data)),
                 y = "Items of AMSTAR 2 checklist",
-                caption = "*AMSTAR 2 critical item \nhttp://dx.doi.org/10.1136/bmj.j4008") +
+                caption = "*AMSTAR 2 critical item. No MA, No meta-analysis conducted. \nSource http://doi.org/10.1136/bmj.j4008 ") +
   ggplot2::scale_fill_manual(values = colpalette) +
-  ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = "Rating")) +
-  ggplot2::scale_x_continuous(labels = scales::percent, n.breaks = 10) +
-  ggplot2::theme(plot.caption = ggplot2::element_text(size = 12, face = "italic"),
+  ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = "Rating Scale")) +
+  ggplot2::scale_x_continuous(labels = scales::percent, n.breaks = 10, expand = c(0, 0.01)) +
+  ggplot2::theme(plot.caption = ggplot2::element_text(size = 10, face = "italic"),
                  panel.grid.minor = ggplot2::element_blank(),
                  panel.background = ggplot2::element_blank(),
                  axis.text = ggplot2::element_text(size = 12),
@@ -69,7 +69,7 @@ amstar_plot <- ggplot2::ggplot(amstar2_proportions, ggplot2::aes(x = prop, y = f
                  axis.title.y = ggplot2::element_text(size = 14, vjust = +0.8),
                  legend.position = "bottom",
                  legend.text = ggplot2::element_text(size = 12),
-                 legend.title = ggplot2::element_text(size = 12, face = "bold", margin = ggplot2::margin(0, 50, 0, 0)),
+                 legend.title = ggplot2::element_text(size = 14, face = "bold", margin = ggplot2::margin(0, 30, 0, 0)),
                  legend.key.size = grid::unit(0.6, "cm")
                  )
 

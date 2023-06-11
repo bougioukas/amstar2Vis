@@ -55,8 +55,8 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75, table_size = 14, c
     ggplot2::coord_equal() +
     ggplot2::scale_fill_manual(values = categories_fills) +
     ggthemes::theme_fivethirtyeight(base_size = 14) +
-    ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = paste0("Rating, N=",  nrow(tb)))) +
-    ggplot2::labs(caption = "*Critically Low/Low/Moderate/High based on 7 critical items according to AMSTAR 2 rating scheme \nhttp://dx.doi.org/10.1136/bmj.j4008") +
+    ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = paste0("Rating Scale, \nN=",  nrow(tb)))) +
+    ggplot2::labs(caption = "*Critically Low/Low/Moderate/High quality according to AMSTAR 2 rating scheme. \nSource http://doi.org/10.1136/bmj.j4008") +
     ggplot2::theme(plot.caption = ggplot2::element_text(hjust = 0.5, size = caption_size, face = "italic"),
                    axis.text = ggplot2::element_blank(),
                    panel.grid.major = ggplot2::element_blank(),

@@ -57,12 +57,12 @@ amstar2_gtable <- function(data = data){
   amstar2_gt$`10. Funding sources` <- factor(amstar2_gt$`10. Funding sources`, levels = c("Yes", "No"))
   categories_fills10 = c("#3a5e8cFF", "#ffcf20FF")
 
-  levels(amstar2_gt$`11.* Use of appropriate statistical methods`) <- c("Yes", "No", "Not Applicable")
-  amstar2_gt$`11.* Use of appropriate statistical methods` <- factor(amstar2_gt$`11.* Use of appropriate statistical methods`, levels = c("Yes", "No", "Not Applicable"))
+  levels(amstar2_gt$`11.* Use of appropriate statistical methods`) <- c("Yes", "No", "No MA")
+  amstar2_gt$`11.* Use of appropriate statistical methods` <- factor(amstar2_gt$`11.* Use of appropriate statistical methods`, levels = c("Yes", "No", "No MA"))
   categories_fills11 = c("#3a5e8cFF", "#ffcf20FF", "#999999")
 
-  levels(amstar2_gt$`12. RoB impact on synthesized results`) <- c("Yes", "No", "Not Applicable")
-  amstar2_gt$`12. RoB impact on synthesized results` <- factor(amstar2_gt$`12. RoB impact on synthesized results`, levels = c("Yes", "No", "Not Applicable"))
+  levels(amstar2_gt$`12. RoB impact on synthesized results`) <- c("Yes", "No", "No MA")
+  amstar2_gt$`12. RoB impact on synthesized results` <- factor(amstar2_gt$`12. RoB impact on synthesized results`, levels = c("Yes", "No", "No MA"))
   categories_fills12 = c("#3a5e8cFF", "#ffcf20FF", "#999999")
 
   levels(amstar2_gt$`13.* Results interpretation with RoB reference`) <- c("Yes", "No")
@@ -73,8 +73,8 @@ amstar2_gtable <- function(data = data){
   amstar2_gt$`14. Heterogeneity explanation` <- factor(amstar2_gt$`14. Heterogeneity explanation`, levels = c("Yes", "No"))
   categories_fills14 = c("#3a5e8cFF", "#ffcf20FF")
 
-  levels(amstar2_gt$`15.* Publication/ small study bias investigation`) <- c("Yes", "No", "Not Applicable")
-  amstar2_gt$`15.* Publication/ small study bias investigation` <- factor(amstar2_gt$`15.* Publication/ small study bias investigation`, levels = c("Yes", "No", "Not Applicable"))
+  levels(amstar2_gt$`15.* Publication/ small study bias investigation`) <- c("Yes", "No", "No MA")
+  amstar2_gt$`15.* Publication/ small study bias investigation` <- factor(amstar2_gt$`15.* Publication/ small study bias investigation`, levels = c("Yes", "No", "No MA"))
   categories_fills15 = c("#3a5e8cFF", "#ffcf20FF", "#999999")
 
   levels(amstar2_gt$`16. Conflict of interest declaration`) <- c("Yes", "No")
@@ -180,12 +180,13 @@ amstar_gtable <- amstar2_gt |>
     align = "center",
     columns = 2:18
   ) |>
+  gt::tab_footnote(footnote = "No MA, No meta-analysis conducted.") |>
   gt::tab_footnote(
     footnote = "Critical item according to AMSTAR 2 rating scheme.",
     gt::cells_column_labels(columns = 2:17)
   ) |>
   gt::tab_footnote(
-    footnote = "Critically Low/Low/Moderate/High based on the 7 critical items according to AMSTAR 2 rating scheme \nhttp://dx.doi.org/10.1136/bmj.j4008",
+    footnote = "Critically Low/Low/Moderate/High quality according to AMSTAR 2 rating scheme. Source http://doi.org/10.1136/bmj.j4008",
     gt::cells_column_labels(columns = overall)
   ) |>
   gt::tab_style(
