@@ -57,7 +57,7 @@ amstar_plot <- ggplot2::ggplot(amstar2_proportions, ggplot2::aes(x = prop, y = f
                      position = ggplot2::position_stack(vjust = 0.5)) +
   ggplot2::labs(x = paste0("Percentage of SRs (%), N=",  nrow(amstar2_data)),
                 y = "Items of AMSTAR 2 checklist",
-                caption = "*AMSTAR 2 critical domain. No MA: No meta-analysis conducted.") +
+                caption = "*Critical domain based on AMSTAR 2 tool. \nNo MA: No meta-analysis conducted.") +
   ggplot2::scale_fill_manual(values = colpalette) +
   ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = "Rating Scale")) +
   ggplot2::scale_x_continuous(labels = scales::percent, n.breaks = 10, expand = c(0, 0.01)) +
