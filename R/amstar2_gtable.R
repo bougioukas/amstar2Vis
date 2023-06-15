@@ -181,13 +181,18 @@ amstar_gtable <- amstar2_gt |>
     columns = 2:18
   ) |>
   gt::tab_footnote(
-    footnote = "No MA: No meta-analysis conducted."
-    ) |>
+    footnote = "*Critical domain based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008)."
+  ) |>
   gt::tab_footnote(
-    footnote = "*Critical domain based on AMSTAR 2 tool."
-    ) |>
+    footnote = "A 'Partial Yes' response is evaluated positively to the overall confidence rating.",
+    gt::cells_column_labels(columns = c(3, 5, 8, 9, 10))
+  ) |>
   gt::tab_footnote(
-    footnote = "Critically Low/Low/Moderate/High quality according to AMSTAR 2 rating scheme.",
+    footnote = "A 'No MA' response means that meta-analysis was not conducted.",
+    gt::cells_column_labels(columns = c(12, 13, 16))
+  ) |>
+  gt::tab_footnote(
+    footnote = "Critically Low/Low/Moderate/High confidence in the results of the review according to AMSTAR 2 rating scheme (see Shea et al. 2017; doi: 10.1136/bmj.j4008). Critically Low: more than one critical flaw with or without non-critical weaknesses, Low: One critical flaw with or without non-critical weaknesses, Moderate: No critical flaws but more than one non-critical weakness, High: No flaws at all or one non-critical weakness.",
     gt::cells_column_labels(columns = overall)
   ) |>
   gt::tab_style(
