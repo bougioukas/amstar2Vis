@@ -208,7 +208,7 @@ amstar_gtable <- amstar2_gt |>
     column_labels.font.weight = "bold"
     ) |>
   gt::tab_spanner(
-    label = "items",
+    label = "AMSTAR 2 items",
     columns = 2:17)
 
   return(amstar_gtable)

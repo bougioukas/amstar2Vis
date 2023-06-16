@@ -1,4 +1,4 @@
-#' @title Plots the AMSTAR halfdonut plot.
+#' @title Plots the AMSTAR overall plot.
 #'
 #' @param data A dataset.
 #'
@@ -17,7 +17,7 @@
 #' @export
 
 
-amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75, table_size = 14, caption_size = 12){
+amstar2_overall <- function(data = data, r1 = 1, r2 = 0.75, table_size = 14, caption_size = 12){
 
   c(missing(r1), missing(r2), missing(table_size), missing(caption_size))
 
@@ -47,6 +47,7 @@ amstar2_halfdonut <- function(data = data, r1 = 1, r2 = 0.75, table_size = 14, c
   dt2 <- gridExtra::tableGrob(t(dt1), theme = gridExtra::ttheme_default(base_size = table_size))
 
 
+# create a half donut plot
   halfdonut <- dt |>
     ggplot2::ggplot() +
     ggtricks::geom_donut_slice(ggplot2::aes(cat = forcats::fct_rev(overall), val = n, fill = forcats::fct_rev(overall)),
