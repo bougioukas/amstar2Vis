@@ -43,7 +43,7 @@ amstar2_table <- function(data = data){
 
   for(i in 1:nrow(amstar2_data)){ #use a for-loop for every row
 
-    # Calculate the number of critical items
+    # Calculate the number of critical items with negative ratings
     n_critical =  as.numeric((amstar2_data[i, 2] == "No") +
                                (amstar2_data[i, 4] == "No") +
                                (amstar2_data[i, 7] == "No") +
@@ -52,7 +52,7 @@ amstar2_table <- function(data = data){
                                (amstar2_data[i, 13] == "No") +
                                (amstar2_data[i, 15] == "No"))
 
-    # Calculate the number of non-critical items
+    # Calculate the number of non-critical items with negative ratings
     n_non_critical = as.numeric((amstar2_data[i, 1] == "No") +
                                   (amstar2_data[i, 3] == "No") +
                                   (amstar2_data[i, 5] == "No") +

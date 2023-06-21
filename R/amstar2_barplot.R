@@ -46,7 +46,7 @@ amstar2_barplot <- function(data = data, fontsize = 3.5, fontcolor = "white", ba
 
 
 # create a a color palette with four distinct colors corresponding to each category
-  colpalette <- c("Yes" = "#3a5e8cFF", "Partial Yes" = "#20908C", "No" = "#ffcf20FF", "No MA" = "#999999")
+  colpalette <- c("Yes" = "#3a5e8cFF", "Partial Yes" = "#35b779", "No" = "#ffcf20FF", "No MA" = "#545353")
 
 
 # create the barplot

@@ -23,7 +23,7 @@ amstar2_gtable <- function(data = data){
 
   levels(amstar2_gt$`2.* Preestablished protocol`) <- c("Yes", "Partial Yes", "No")
   amstar2_gt$`2.* Preestablished protocol` <- factor(amstar2_gt$`2.* Preestablished protocol`, levels = c("Yes", "Partial Yes", "No"))
-  categories_fills2 = c("#3a5e8cFF", "#20908C", "#ffcf20FF")
+  categories_fills2 = c("#3a5e8cFF", "#35b779", "#ffcf20FF")
 
   levels(amstar2_gt$`3. Explanation of inlcuded studies' design`) <- c("Yes", "No")
   amstar2_gt$`3. Explanation of inlcuded studies' design` <- factor(amstar2_gt$`3. Explanation of inlcuded studies' design`, levels = c("Yes", "No"))
@@ -31,7 +31,7 @@ amstar2_gtable <- function(data = data){
 
   levels(amstar2_gt$`4.* Comprehensive search strategy`) <- c("Yes", "Partial Yes", "No")
   amstar2_gt$`4.* Comprehensive search strategy` <- factor(amstar2_gt$`4.* Comprehensive search strategy`, levels = c("Yes", "Partial Yes", "No"))
-  categories_fills4 = c("#3a5e8cFF", "#20908C", "#ffcf20FF")
+  categories_fills4 = c("#3a5e8cFF", "#35b779", "#ffcf20FF")
 
   levels(amstar2_gt$`5. Duplicate study selection`) <- c("Yes", "No")
   amstar2_gt$`5. Duplicate study selection` <- factor(amstar2_gt$`5. Duplicate study selection`, levels = c("Yes", "No"))
@@ -43,15 +43,15 @@ amstar2_gtable <- function(data = data){
 
   levels(amstar2_gt$`7.* List of excluded studies and justification`) <- c("Yes", "Partial Yes", "No")
   amstar2_gt$`7.* List of excluded studies and justification` <- factor(amstar2_gt$`7.* List of excluded studies and justification`, levels = c("Yes", "Partial Yes", "No"))
-  categories_fills7 = c("#3a5e8cFF", "#20908C", "#ffcf20FF")
+  categories_fills7 = c("#3a5e8cFF", "#35b779", "#ffcf20FF")
 
   levels(amstar2_gt$`8. Description of included studies`) <- c("Yes", "Partial Yes", "No")
   amstar2_gt$`8. Description of included studies` <- factor(amstar2_gt$`8. Description of included studies`, levels = c("Yes", "Partial Yes", "No"))
-  categories_fills8 = c("#3a5e8cFF", "#20908C", "#ffcf20FF")
+  categories_fills8 = c("#3a5e8cFF", "#35b779", "#ffcf20FF")
 
   levels(amstar2_gt$`9.* Risk of bias (RoB) assessment`) <- c("Yes", "Partial Yes", "No")
   amstar2_gt$`9.* Risk of bias (RoB) assessment` <- factor(amstar2_gt$`9.* Risk of bias (RoB) assessment`, levels = c("Yes", "Partial Yes", "No"))
-  categories_fills9 = c("#3a5e8cFF", "#20908C", "#ffcf20FF")
+  categories_fills9 = c("#3a5e8cFF", "#35b779", "#ffcf20FF")
 
   levels(amstar2_gt$`10. Funding sources`) <- c("Yes", "No")
   amstar2_gt$`10. Funding sources` <- factor(amstar2_gt$`10. Funding sources`, levels = c("Yes", "No"))
@@ -59,11 +59,11 @@ amstar2_gtable <- function(data = data){
 
   levels(amstar2_gt$`11.* Use of appropriate statistical methods`) <- c("Yes", "No", "No MA")
   amstar2_gt$`11.* Use of appropriate statistical methods` <- factor(amstar2_gt$`11.* Use of appropriate statistical methods`, levels = c("Yes", "No", "No MA"))
-  categories_fills11 = c("#3a5e8cFF", "#ffcf20FF", "#999999")
+  categories_fills11 = c("#3a5e8cFF", "#ffcf20FF", "#545353")
 
   levels(amstar2_gt$`12. RoB impact on synthesized results`) <- c("Yes", "No", "No MA")
   amstar2_gt$`12. RoB impact on synthesized results` <- factor(amstar2_gt$`12. RoB impact on synthesized results`, levels = c("Yes", "No", "No MA"))
-  categories_fills12 = c("#3a5e8cFF", "#ffcf20FF", "#999999")
+  categories_fills12 = c("#3a5e8cFF", "#ffcf20FF", "#545353")
 
   levels(amstar2_gt$`13.* Results interpretation with RoB reference`) <- c("Yes", "No")
   amstar2_gt$`13.* Results interpretation with RoB reference` <- factor(amstar2_gt$`13.* Results interpretation with RoB reference`, levels = c("Yes", "No"))
@@ -75,7 +75,7 @@ amstar2_gtable <- function(data = data){
 
   levels(amstar2_gt$`15.* Publication/ small study bias investigation`) <- c("Yes", "No", "No MA")
   amstar2_gt$`15.* Publication/ small study bias investigation` <- factor(amstar2_gt$`15.* Publication/ small study bias investigation`, levels = c("Yes", "No", "No MA"))
-  categories_fills15 = c("#3a5e8cFF", "#ffcf20FF", "#999999")
+  categories_fills15 = c("#3a5e8cFF", "#ffcf20FF", "#545353")
 
   levels(amstar2_gt$`16. Conflict of interest declaration`) <- c("Yes", "No")
   amstar2_gt$`16. Conflict of interest declaration` <- factor(amstar2_gt$`16. Conflict of interest declaration`, levels = c("Yes", "No"))
@@ -85,7 +85,7 @@ amstar2_gtable <- function(data = data){
   # overall
   levels(amstar2_gt$overall) <- c("Critically Low", "Low", "Moderate", "High")
   amstar2_gt$overall <- factor(amstar2_gt$overall, levels = c("Critically Low", "Low", "Moderate", "High"))
-  categories_fills <- c("#FD9567FF", "#FEC98DFF", "#9F2F7FFF", "#451077FF")
+  categories_fills <- c("Critically Low" = "#FD9567FF", "Low" = "#FDE4A6FF", "Moderate" = "#9F2F7FFF", "High" = "#150E38FF")
 
 
 # gt table
@@ -188,28 +188,36 @@ amstar_gtable <- amstar2_gt |>
     gt::cells_column_labels(columns = c(3, 5, 8, 9, 10))
   ) |>
   gt::tab_footnote(
-    footnote = "A 'No MA' response means that meta-analysis was not conducted.",
+    footnote = "A 'No MA' response stands for 'no meta-analysis conducted'.",
     gt::cells_column_labels(columns = c(12, 13, 16))
   ) |>
   gt::tab_footnote(
     footnote = "Critically Low/Low/Moderate/High confidence in the results of the review according to AMSTAR 2 rating scheme (see Shea et al. 2017; doi: 10.1136/bmj.j4008). Critically Low: more than one critical flaw with or without non-critical weaknesses, Low: One critical flaw with or without non-critical weaknesses, Moderate: No critical flaws but more than one non-critical weakness, High: No flaws at all or one non-critical weakness.",
     gt::cells_column_labels(columns = overall)
   ) |>
+  gt::tab_spanner(
+    label = "AMSTAR 2 items",
+    columns = 2:17) |>
+  gt::tab_options(
+    column_labels.font.weight = "bold"
+  ) |>
   gt::tab_style(
     style = gt::cell_borders(
       sides = c("left"),
-      color = "gray30",
+      color = "gray60",
       weight = gt::px(5.0),
       style = "solid"
     ),
     locations = gt::cells_body(columns = overall)
     ) |>
-  gt::tab_options(
-    column_labels.font.weight = "bold"
-    ) |>
-  gt::tab_spanner(
-    label = "AMSTAR 2 items",
-    columns = 2:17)
+  gt::tab_style(
+    style = gt::cell_borders(
+      sides = "bottom",
+      color = "black",
+      weight = gt::px(3.0)
+    ),
+    locations = gt::cells_body(rows = nrow(amstar2_gt))
+  )
 
   return(amstar_gtable)
 

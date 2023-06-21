@@ -32,7 +32,7 @@ amstar2_overall <- function(data = data, r1 = 1, r2 = 0.75, table_size = 14, cap
 
 
 # create a a color palette with four distinct colors corresponding to each category
-  categories_fills <- c("Critically Low" = "#FD9567FF", "Low" = "#FEC98DFF", "Moderate" = "#9F2F7FFF", "High" = "#451077FF")
+  categories_fills <- c("Critically Low" = "#FD9567FF", "Low" = "#FDE4A6FF", "Moderate" = "#9F2F7FFF", "High" = "#150E38FF")
 
 
 # create a table with the number of reviews and their percentages
