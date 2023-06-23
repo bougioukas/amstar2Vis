@@ -181,14 +181,18 @@ amstar_gtable <- amstar2_gt |>
     columns = 2:18
   ) |>
   gt::tab_footnote(
-    footnote = "*Critical domain based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008)."
+    footnote = "*Critical item (domain) based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008)."
   ) |>
   gt::tab_footnote(
-    footnote = "A 'Partial Yes' response is evaluated positively to the overall confidence rating.",
+    footnote = "Possible responses: Yes/Partial Yes/No. A 'Partial Yes' response is evaluated positively to the overall confidence rating.",
     gt::cells_column_labels(columns = c(3, 5, 8, 9, 10))
   ) |>
   gt::tab_footnote(
-    footnote = "A 'No MA' response stands for 'no meta-analysis conducted'.",
+    footnote = "Item response is dependent on separate ratings of randomized controlled trials  (RCTs) and nonrandomized studies of healthcare interventions (NRSI) in the review.",
+    gt::cells_column_labels(columns = c(10, 12))
+  ) |>
+  gt::tab_footnote(
+    footnote = "Possible responses: Yes/No/No MA. A 'No MA' response stands for 'no meta-analysis conducted' and does not affect the overall confidence rating.",
     gt::cells_column_labels(columns = c(12, 13, 16))
   ) |>
   gt::tab_footnote(
