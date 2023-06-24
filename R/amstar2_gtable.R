@@ -90,6 +90,7 @@ amstar2_gtable <- function(data = data){
 
 # gt table
 amstar_gtable <- amstar2_gt |>
+  dplyr::rename("Overall confidence" = "overall") |>
   gt::gt() |>
   gt::data_color(
       columns = 2,
@@ -181,14 +182,14 @@ amstar_gtable <- amstar2_gt |>
     columns = 2:18
   ) |>
   gt::tab_footnote(
-    footnote = "*Critical item (domain) based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008)."
+    footnote = "*Asterisk indicates a critical item (domain) based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008)."
   ) |>
   gt::tab_footnote(
     footnote = "Possible responses: Yes/Partial Yes/No. A 'Partial Yes' response is evaluated positively to the overall confidence rating.",
     gt::cells_column_labels(columns = c(3, 5, 8, 9, 10))
   ) |>
   gt::tab_footnote(
-    footnote = "Item response is dependent on separate ratings of randomized controlled trials  (RCTs) and nonrandomized studies of healthcare interventions (NRSI) in the review.",
+    footnote = "Item response depends on separate assessment of randomized controlled trials  (RCTs) and non-randomized studies of healthcare interventions (NRSI) in the review.",
     gt::cells_column_labels(columns = c(10, 12))
   ) |>
   gt::tab_footnote(
@@ -197,7 +198,7 @@ amstar_gtable <- amstar2_gt |>
   ) |>
   gt::tab_footnote(
     footnote = "Critically Low/Low/Moderate/High confidence in the results of the review according to AMSTAR 2 rating scheme (see Shea et al. 2017; doi: 10.1136/bmj.j4008). Critically Low: more than one critical flaw with or without non-critical weaknesses, Low: One critical flaw with or without non-critical weaknesses, Moderate: No critical flaws but more than one non-critical weakness, High: No flaws at all or one non-critical weakness.",
-    gt::cells_column_labels(columns = overall)
+    gt::cells_column_labels(columns = 18)
   ) |>
   gt::tab_spanner(
     label = "AMSTAR 2 items",
@@ -212,7 +213,7 @@ amstar_gtable <- amstar2_gt |>
       weight = gt::px(5.0),
       style = "solid"
     ),
-    locations = gt::cells_body(columns = overall)
+    locations = gt::cells_body(columns = 18)
     ) |>
   gt::tab_style(
     style = gt::cell_borders(

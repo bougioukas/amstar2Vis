@@ -81,7 +81,7 @@ amstar2_table <- function(data = data){
 
   }
 
-  amstar_table <- tibble::tibble(reviews = data$reviews, amstar2_data, overall)
+  amstar_table <- tibble::tibble(Reviews = data$reviews, amstar2_data, overall)
 
 
   return(amstar_table)

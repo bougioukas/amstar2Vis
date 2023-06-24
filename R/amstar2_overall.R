@@ -40,7 +40,7 @@ amstar2_overall <- function(data = data, r1 = 1, r2 = 0.75, table_size = 14, cap
     dplyr::select(overall) |>
     dplyr::count(overall) |>
     dplyr::mutate("Percentage (%):" = round(n/sum(n)*100, digits = 1)) |>
-    dplyr::rename("*Overall:" = "overall",
+    dplyr::rename("*Overall confidence:" = "overall",
                   "Number of reviews:" = "n")
 
 # reformat the table
