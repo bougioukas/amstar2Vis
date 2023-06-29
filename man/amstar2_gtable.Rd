@@ -2,18 +2,18 @@
 % Please edit documentation in R/amstar2_gtable.R
 \name{amstar2_gtable}
 \alias{amstar2_gtable}
-\title{Generated a AMSTAR 2 gt table}
+\title{Generates the AMSTAR 2 main table}
 \usage{
 amstar2_gtable(data = data)
 }
 \arguments{
-\item{data}{A dataset.}
+\item{data}{A dataset containing the item ratings.}
 }
 \value{
 amstar_gtable
 }
 \description{
-This function creates a AMSTAR 2 gt table.
+It creates a nice-looking “gt” table that includes the item ratings and the overall confidence rating for each SR according to AMSTAR 2 guidelines.
 }
 \examples{
 DATASET <- readxl::read_excel(system.file("extdata", "dat.xlsx", package = "amstar2"))

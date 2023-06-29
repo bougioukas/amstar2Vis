@@ -1,14 +1,14 @@
-#' @title Plots the AMSTAR barplot
+#' @title Creates a publication-ready stacked barplot based on the ggplot2 package.
 #'
-#' @description This function plots the AMSTAR bar plot.
+#' @description It shows the distribution of ratings (“Yes”, “Partial Yes”, “No”, “No MA”) as percentages of SRs for each AMSTAR 2 item.
 #'
-#' @param data A dataset.
+#' @param data A dataset containing the item ratings.
 #'
-#' @param fontsize A number that controls the aesthetic of font size of the percentages in the bars. Default is `fontsize = 3.5`.
+#' @param font_size A number that controls the aesthetic of font size of the percentages in the bars. Default is `font_size = 3.5`.
 #'
-#' @param fontcolor A color that controls the aesthetic of color of the percentages in the bars. Default is `fontcolor = "white"`.
+#' @param font_color A color that controls the aesthetic of color of the percentages in the bars. Default is `font_color = "white"`.
 #'
-#' @param barwidth A number that controls the width between the bars. Default is `barwidth = 0.8`.
+#' @param bar_width A number that controls the width between the bars. Default is `bar_width = 0.8`.
 #'
 #' @return amstar_plot
 #'
@@ -17,9 +17,9 @@
 #' @export
 
 
-amstar2_barplot <- function(data = data, fontsize = 3.5, fontcolor = "white", barwidth = 0.8){
+amstar2_barplot <- function(data = data, font_size = 3.5, font_color = "white", bar_width = 0.8){
 
-  c(missing(fontsize), missing(fontcolor), missing(barwidth))
+  c(missing(font_size), missing(font_color), missing(bar_width))
 
 
 # select the AMSTAR items
@@ -46,18 +46,18 @@ amstar2_barplot <- function(data = data, fontsize = 3.5, fontcolor = "white", ba
 
 
 # create a a color palette with four distinct colors corresponding to each category
-  colpalette <- c("Yes" = "#3a5e8cFF", "Partial Yes" = "#35b779", "No" = "#ffcf20FF", "No MA" = "#545353")
+  colpalette <- c("Yes" = "#3a5e8cFF", "Partial Yes" = "#35b779", "No" = "#ffcf20FF", "No MA" = "#303030")
 
 
 # create the barplot
 amstar_plot <- ggplot2::ggplot(amstar2_proportions, ggplot2::aes(x = prop, y = forcats::fct_rev(item), fill = forcats::fct_rev(assessment))) +
-  ggplot2::geom_col(position = "fill", width = barwidth) +
-  ggplot2::geom_text(ggplot2::aes(label = paste0(round(prop*100, digits = 1),"%")), size = fontsize,
-                     color = fontcolor,
+  ggplot2::geom_col(position = "fill", width = bar_width) +
+  ggplot2::geom_text(ggplot2::aes(label = paste0(round(prop*100, digits = 1),"%")), size = font_size,
+                     color = font_color,
                      position = ggplot2::position_stack(vjust = 0.5)) +
   ggplot2::labs(x = paste0("Percentage of SRs (%), N=",  nrow(amstar2_data)),
                 y = "Items of AMSTAR 2 checklist",
-                caption = "No MA, No meta-analysis conducted. \n*Critical domain based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008).") +
+                caption = "No MA, No meta-analysis conducted. \n*Asterisk indicates critical item (domain) based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008).") +
   ggplot2::scale_fill_manual(values = colpalette) +
   ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = "Rating Scale")) +
   ggplot2::scale_x_continuous(labels = scales::percent, n.breaks = 10, expand = c(0, 0.01)) +

@@ -1,8 +1,8 @@
-#' @title Calculates the overall rating based on critical items
+#' @title Calculates the overall confidence in the review results according to AMSTAR 2 guidelines
 #'
-#' @description This function adds the overall assessment.
+#' @description This is a helper function. It creates a data frame with the item ratings plus the overall confidence in the results of each SR.
 #'
-#' @param data A dataset.
+#' @param data A dataset containing the item ratings.
 #'
 #' @return amstar_table
 #'

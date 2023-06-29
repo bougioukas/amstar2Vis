@@ -2,18 +2,18 @@
 % Please edit documentation in R/amstar2_table.R
 \name{amstar2_table}
 \alias{amstar2_table}
-\title{Calculates the overall rating based on critical items}
+\title{Calculates the overall confidence in the review results according to AMSTAR 2 guidelines}
 \usage{
 amstar2_table(data = data)
 }
 \arguments{
-\item{data}{A dataset.}
+\item{data}{A dataset containing the item ratings.}
 }
 \value{
 amstar_table
 }
 \description{
-This function adds the overall assessment.
+This is a helper function. It creates a data frame with the item ratings plus the overall confidence in the results of each SR.
 }
 \examples{
 DATASET <- readxl::read_excel(system.file("extdata", "dat.xlsx", package = "amstar2"))

@@ -1,8 +1,8 @@
-#' @title Generated a AMSTAR 2 gt table
+#' @title Generates the AMSTAR 2 main table
 #'
-#' @description This function creates a AMSTAR 2 gt table.
+#' @description It creates a nice-looking “gt” table that includes the item ratings and the overall confidence rating for each SR according to AMSTAR 2 guidelines.
 #'
-#' @param data A dataset.
+#' @param data A dataset containing the item ratings.
 #'
 #' @return amstar_gtable
 #'
@@ -59,11 +59,11 @@ amstar2_gtable <- function(data = data){
 
   levels(amstar2_gt$`11.* Use of appropriate statistical methods`) <- c("Yes", "No", "No MA")
   amstar2_gt$`11.* Use of appropriate statistical methods` <- factor(amstar2_gt$`11.* Use of appropriate statistical methods`, levels = c("Yes", "No", "No MA"))
-  categories_fills11 = c("#3a5e8cFF", "#ffcf20FF", "#545353")
+  categories_fills11 = c("#3a5e8cFF", "#ffcf20FF", "#303030")
 
   levels(amstar2_gt$`12. RoB impact on synthesized results`) <- c("Yes", "No", "No MA")
   amstar2_gt$`12. RoB impact on synthesized results` <- factor(amstar2_gt$`12. RoB impact on synthesized results`, levels = c("Yes", "No", "No MA"))
-  categories_fills12 = c("#3a5e8cFF", "#ffcf20FF", "#545353")
+  categories_fills12 = c("#3a5e8cFF", "#ffcf20FF", "#303030")
 
   levels(amstar2_gt$`13.* Results interpretation with RoB reference`) <- c("Yes", "No")
   amstar2_gt$`13.* Results interpretation with RoB reference` <- factor(amstar2_gt$`13.* Results interpretation with RoB reference`, levels = c("Yes", "No"))
@@ -75,7 +75,7 @@ amstar2_gtable <- function(data = data){
 
   levels(amstar2_gt$`15.* Publication/ small study bias investigation`) <- c("Yes", "No", "No MA")
   amstar2_gt$`15.* Publication/ small study bias investigation` <- factor(amstar2_gt$`15.* Publication/ small study bias investigation`, levels = c("Yes", "No", "No MA"))
-  categories_fills15 = c("#3a5e8cFF", "#ffcf20FF", "#545353")
+  categories_fills15 = c("#3a5e8cFF", "#ffcf20FF", "#303030")
 
   levels(amstar2_gt$`16. Conflict of interest declaration`) <- c("Yes", "No")
   amstar2_gt$`16. Conflict of interest declaration` <- factor(amstar2_gt$`16. Conflict of interest declaration`, levels = c("Yes", "No"))
@@ -85,7 +85,7 @@ amstar2_gtable <- function(data = data){
   # overall
   levels(amstar2_gt$overall) <- c("Critically Low", "Low", "Moderate", "High")
   amstar2_gt$overall <- factor(amstar2_gt$overall, levels = c("Critically Low", "Low", "Moderate", "High"))
-  categories_fills <- c("Critically Low" = "#FD9567FF", "Low" = "#FDE4A6FF", "Moderate" = "#9F2F7FFF", "High" = "#150E38FF")
+  categories_fills <- c("Critically Low" = "#FD9567FF", "Low" = "#FDE4A6FF", "Moderate" = "#9F2F7FFF", "High" = "#00021E")
 
 
 # gt table

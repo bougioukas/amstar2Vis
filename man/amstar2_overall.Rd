@@ -2,7 +2,7 @@
 % Please edit documentation in R/amstar2_overall.R
 \name{amstar2_overall}
 \alias{amstar2_overall}
-\title{Plots the AMSTAR overall plot.}
+\title{Creates a summary graph with the AMSTAR 2 overall rating}
 \usage{
 amstar2_overall(
   data = data,
@@ -13,7 +13,7 @@ amstar2_overall(
 )
 }
 \arguments{
-\item{data}{A dataset.}
+\item{data}{A dataset containing the item ratings.}
 
 \item{r1}{Outer circle radius. Default is `r1 = 1`.}
 
@@ -27,7 +27,7 @@ amstar2_overall(
 halfdonut
 }
 \description{
-Plots the AMSTAR overall plot.
+Creates a summary graph with the AMSTAR 2 overall rating
 }
 \examples{
 DATASET <- readxl::read_excel(system.file("extdata", "dat.xlsx", package = "amstar2"))

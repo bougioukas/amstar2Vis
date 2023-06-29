@@ -2,29 +2,29 @@
 % Please edit documentation in R/amstar2_barplot.R
 \name{amstar2_barplot}
 \alias{amstar2_barplot}
-\title{Plots the AMSTAR barplot}
+\title{Creates a publication-ready stacked barplot based on the ggplot2 package.}
 \usage{
 amstar2_barplot(
   data = data,
-  fontsize = 3.5,
-  fontcolor = "white",
-  barwidth = 0.8
+  font_size = 3.5,
+  font_color = "white",
+  bar_width = 0.8
 )
 }
 \arguments{
-\item{data}{A dataset.}
+\item{data}{A dataset containing the item ratings.}
 
-\item{fontsize}{A number that controls the aesthetic of font size of the percentages in the bars. Default is `fontsize = 3.5`.}
+\item{font_size}{A number that controls the aesthetic of font size of the percentages in the bars. Default is `font_size = 3.5`.}
 
-\item{fontcolor}{A color that controls the aesthetic of color of the percentages in the bars. Default is `fontcolor = "white"`.}
+\item{font_color}{A color that controls the aesthetic of color of the percentages in the bars. Default is `font_color = "white"`.}
 
-\item{barwidth}{A number that controls the width between the bars. Default is `barwidth = 0.8`.}
+\item{bar_width}{A number that controls the width between the bars. Default is `bar_width = 0.8`.}
 }
 \value{
 amstar_plot
 }
 \description{
-This function plots the AMSTAR bar plot.
+It shows the distribution of ratings (“Yes”, “Partial Yes”, “No”, “No MA”) as percentages of SRs for each AMSTAR 2 item.
 }
 \examples{
 DATASET <- readxl::read_excel(system.file("extdata", "dat.xlsx", package = "amstar2"))
