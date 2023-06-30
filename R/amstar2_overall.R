@@ -10,7 +10,7 @@
 #'
 #' @param caption_size It controls the font size of the caption. Default is `caption_size = 12`.
 #'
-#' @return halfdonut
+#' @return A “ggplot2”-based graph combining a half-donut bar and an inset summary table.
 #'
 #' @example man/examples/example3.R
 #'
@@ -20,6 +20,8 @@
 amstar2_overall <- function(data = data, r1 = 1, r2 = 0.75, table_size = 14, caption_size = 12){
 
   c(missing(r1), missing(r2), missing(table_size), missing(caption_size))
+
+  n <- overall <- NULL
 
   tb <- amstar2_table(data)
 

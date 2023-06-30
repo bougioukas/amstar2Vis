@@ -10,7 +10,7 @@ amstar2_table(data = data)
 \item{data}{A dataset containing the item ratings.}
 }
 \value{
-amstar_table
+A data frame object.
 }
 \description{
 This is a helper function. It creates a data frame with the item ratings plus the overall confidence in the results of each SR.

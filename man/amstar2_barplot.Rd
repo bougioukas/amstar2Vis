@@ -21,7 +21,7 @@ amstar2_barplot(
 \item{bar_width}{A number that controls the width between the bars. Default is `bar_width = 0.8`.}
 }
 \value{
-amstar_plot
+A “ggplot2”-based stacked barplot.
 }
 \description{
 It shows the distribution of ratings (“Yes”, “Partial Yes”, “No”, “No MA”) as percentages of SRs for each AMSTAR 2 item.

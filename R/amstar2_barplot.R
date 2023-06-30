@@ -10,7 +10,7 @@
 #'
 #' @param bar_width A number that controls the width between the bars. Default is `bar_width = 0.8`.
 #'
-#' @return amstar_plot
+#' @return A “ggplot2”-based stacked barplot.
 #'
 #' @example man/examples/example2.R
 #'
@@ -21,6 +21,7 @@ amstar2_barplot <- function(data = data, font_size = 3.5, font_color = "white", 
 
   c(missing(font_size), missing(font_color), missing(bar_width))
 
+  n <- prop <- item <- assessment <- NULL
 
 # select the AMSTAR items
   amstar2_data <- amstar2_table(data) |>

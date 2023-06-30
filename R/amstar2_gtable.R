@@ -4,7 +4,7 @@
 #'
 #' @param data A dataset containing the item ratings.
 #'
-#' @return amstar_gtable
+#' @return A “gt” table object.
 #'
 #' @example man/examples/example1.R
 #'

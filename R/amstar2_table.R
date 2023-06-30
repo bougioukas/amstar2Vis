@@ -4,7 +4,7 @@
 #'
 #' @param data A dataset containing the item ratings.
 #'
-#' @return amstar_table
+#' @return A data frame object.
 #'
 #' @example man/examples/example0.R
 #'

@@ -10,7 +10,7 @@ amstar2_gtable(data = data)
 \item{data}{A dataset containing the item ratings.}
 }
 \value{
-amstar_gtable
+A “gt” table object.
 }
 \description{
 It creates a nice-looking “gt” table that includes the item ratings and the overall confidence rating for each SR according to AMSTAR 2 guidelines.

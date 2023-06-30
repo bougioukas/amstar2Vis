@@ -24,7 +24,7 @@ amstar2_overall(
 \item{caption_size}{It controls the font size of the caption. Default is `caption_size = 12`.}
 }
 \value{
-halfdonut
+A “ggplot2”-based graph combining a half-donut bar and an inset summary table.
 }
 \description{
 Creates a summary graph with the AMSTAR 2 overall rating
