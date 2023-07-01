@@ -182,6 +182,9 @@ amstar_gtable <- amstar2_gt |>
     columns = 2:18
   ) |>
   gt::tab_footnote(
+    footnote = "AMSTAR, A MeaSurement Tool to Assess Systematic Reviews; PICO, participant, intervention, comparison, outcome; RoB, Risk of bias."
+  ) |>
+  gt::tab_footnote(
     footnote = "*Asterisk indicates a critical item (domain) based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008)."
   ) |>
   gt::tab_footnote(
