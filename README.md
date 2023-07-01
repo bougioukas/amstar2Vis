@@ -20,12 +20,15 @@ Load the package:
 library(amstar2)
 ```
 
-## Read the example data
+
+Then read the example data:
 
 ``` r
 DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2"))
 
 ```
+
+<br>
 
 ## AMSTAR 2 "gt" Table
 
@@ -34,6 +37,9 @@ amstar2_gtable(DATASET)
 ```
 
 <img src="man/figures/amstar_table.png" align="center" width="820" />
+
+
+<br>
 
 
 ## AMSTAR 2 Barplot
@@ -45,6 +51,7 @@ amstar2_barplot(DATASET)
 <img src="man/figures/amstar_barplot.png" align="center" width="820" />
 
 
+<br>
 
 ## AMSTAR 2 Overall
 
