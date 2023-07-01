@@ -16,7 +16,7 @@ A data frame object.
 This is a helper function. It creates a data frame with the item ratings plus the overall confidence in the results of each SR.
 }
 \examples{
-DATASET <- readxl::read_excel(system.file("extdata", "dat.xlsx", package = "amstar2"))
+DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2"))
 
 tb <- amstar2_table(DATASET)
 }

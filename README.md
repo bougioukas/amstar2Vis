@@ -15,18 +15,39 @@ devtools::install_github('bougioukas/amstar2')
 ```
 
 
+## Load the example data
 
-## AMSTAR 2 Table
+``` r
+DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2"))
+
+```
+
+## AMSTAR 2 "gt" Table
+
+``` r
+amstar2_gtable(DATASET)
+```
+
 <img src="man/figures/amstar_table.png" align="center" width="620" />
 
 
 ## AMSTAR 2 Barplot
+
+``` r
+amstar2_barplot(DATASET)
+```
+
 <img src="man/figures/amstar_barplot.png" align="center" width="620" />
 
-## AMSTAR 2 Halfdonut
-<img src="man/figures/amstar_halfdonut.png" align="center" width="620" />
 
 
+## AMSTAR 2 Overall
+
+``` r
+amstar2_overall(DATASET)
+```
+
+<img src="man/figures/amstar_overall.png" align="center" width="620" />
 
 
 
