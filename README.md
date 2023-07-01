@@ -28,7 +28,7 @@ DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package 
 amstar2_gtable(DATASET)
 ```
 
-<img src="man/figures/amstar_table.png" align="center" width="620" />
+<img src="man/figures/amstar_table.png" align="center" width="820" />
 
 
 ## AMSTAR 2 Barplot
@@ -37,7 +37,7 @@ amstar2_gtable(DATASET)
 amstar2_barplot(DATASET)
 ```
 
-<img src="man/figures/amstar_barplot.png" align="center" width="620" />
+<img src="man/figures/amstar_barplot.png" align="center" width="820" />
 
 
 
@@ -47,7 +47,7 @@ amstar2_barplot(DATASET)
 amstar2_overall(DATASET)
 ```
 
-<img src="man/figures/amstar_overall.png" align="center" width="620" />
+<img src="man/figures/amstar_overall.png" align="center" width="820" />
 
 
 
