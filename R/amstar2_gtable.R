@@ -185,6 +185,10 @@ amstar_gtable <- amstar2_gt |>
     footnote = "*Asterisk indicates a critical item (domain) based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008)."
   ) |>
   gt::tab_footnote(
+    footnote = "Possible responses: Yes/No",
+    gt::cells_column_labels(columns = c(2, 4, 6, 7, 11, 14, 15, 17))
+  ) |>
+  gt::tab_footnote(
     footnote = "Possible responses: Yes/Partial Yes/No. A 'Partial Yes' response is evaluated positively to the overall confidence rating.",
     gt::cells_column_labels(columns = c(3, 5, 8, 9, 10))
   ) |>
@@ -222,7 +226,8 @@ amstar_gtable <- amstar2_gt |>
       weight = gt::px(3.0)
     ),
     locations = gt::cells_body(rows = nrow(amstar2_gt))
-  )
+  ) |>
+  gt::opt_footnote_marks(marks = "LETTERS")
 
   return(amstar_gtable)
 
