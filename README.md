@@ -14,8 +14,13 @@ It creates tables and presents graphical visualizations of the assessment of sys
 devtools::install_github('bougioukas/amstar2')
 ```
 
+Load the package:
 
-## Load the example data
+``` r
+library(amstar2)
+```
+
+## Read the example data
 
 ``` r
 DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2"))
