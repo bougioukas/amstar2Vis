@@ -58,7 +58,7 @@ amstar_plot <- ggplot2::ggplot(amstar2_proportions, ggplot2::aes(x = prop, y = f
                      position = ggplot2::position_stack(vjust = 0.5)) +
   ggplot2::labs(x = paste0("Percentage of SRs (%), N=",  nrow(amstar2_data)),
                 y = "Items of AMSTAR 2 checklist",
-                caption = "No MA, No meta-analysis conducted. \n*Asterisk indicates critical item (domain) based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008).") +
+                caption = "PICO, participant, intervention, comparison, outcome; RoB, Risk of bias; No MA, No meta-analysis conducted. \n*Asterisk indicates critical item (domain) based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008).") +
   ggplot2::scale_fill_manual(values = colpalette) +
   ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = "Rating Scale")) +
   ggplot2::scale_x_continuous(labels = scales::percent, n.breaks = 10, expand = c(0, 0.01)) +

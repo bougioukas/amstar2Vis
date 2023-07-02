@@ -18,14 +18,14 @@ amstar2_table <- function(data = data){
   amstar2_data <- data[, -1]
 
   label <- c("1. PICO components",
-             "2.* Preestablished protocol",
+             "2.* Pre-established protocol",
              "3. Explanation of inlcuded studies' design",
              "4.* Comprehensive search strategy",
              "5. Duplicate study selection",
              "6. Duplicate data extraction",
              "7.* List of excluded studies and justification",
              "8. Description of included studies",
-             "9.* Risk of bias (RoB) assessment",
+             "9.* Assessment of RoB in icluded studies",
              "10. Funding sources",
              "11.* Use of appropriate statistical methods",
              "12. RoB impact on synthesized results",

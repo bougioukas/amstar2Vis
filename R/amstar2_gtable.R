@@ -21,8 +21,8 @@ amstar2_gtable <- function(data = data){
   amstar2_gt$`1. PICO components` <- factor(amstar2_gt$`1. PICO components`, levels = c("Yes", "No"))
   categories_fills1 = c("#3a5e8cFF", "#ffcf20FF")
 
-  levels(amstar2_gt$`2.* Preestablished protocol`) <- c("Yes", "Partial Yes", "No")
-  amstar2_gt$`2.* Preestablished protocol` <- factor(amstar2_gt$`2.* Preestablished protocol`, levels = c("Yes", "Partial Yes", "No"))
+  levels(amstar2_gt$`2.* Pre-established protocol`) <- c("Yes", "Partial Yes", "No")
+  amstar2_gt$`2.* Pre-established protocol` <- factor(amstar2_gt$`2.* Pre-established protocol`, levels = c("Yes", "Partial Yes", "No"))
   categories_fills2 = c("#3a5e8cFF", "#35b779", "#ffcf20FF")
 
   levels(amstar2_gt$`3. Explanation of inlcuded studies' design`) <- c("Yes", "No")
@@ -49,8 +49,8 @@ amstar2_gtable <- function(data = data){
   amstar2_gt$`8. Description of included studies` <- factor(amstar2_gt$`8. Description of included studies`, levels = c("Yes", "Partial Yes", "No"))
   categories_fills8 = c("#3a5e8cFF", "#35b779", "#ffcf20FF")
 
-  levels(amstar2_gt$`9.* Risk of bias (RoB) assessment`) <- c("Yes", "Partial Yes", "No")
-  amstar2_gt$`9.* Risk of bias (RoB) assessment` <- factor(amstar2_gt$`9.* Risk of bias (RoB) assessment`, levels = c("Yes", "Partial Yes", "No"))
+  levels(amstar2_gt$`9.* Assessment of RoB in icluded studies`) <- c("Yes", "Partial Yes", "No")
+  amstar2_gt$`9.* Assessment of RoB in icluded studies` <- factor(amstar2_gt$`9.* Assessment of RoB in icluded studies`, levels = c("Yes", "Partial Yes", "No"))
   categories_fills9 = c("#3a5e8cFF", "#35b779", "#ffcf20FF")
 
   levels(amstar2_gt$`10. Funding sources`) <- c("Yes", "No")
@@ -188,7 +188,7 @@ amstar_gtable <- amstar2_gt |>
     footnote = "*Asterisk indicates a critical item (domain) based on the source publication of AMSTAR 2 tool (Shea et al. 2017; doi: 10.1136/bmj.j4008)."
   ) |>
   gt::tab_footnote(
-    footnote = "Possible responses: Yes/No",
+    footnote = "Possible responses: Yes/No.",
     gt::cells_column_labels(columns = c(2, 4, 6, 7, 11, 14, 15, 17))
   ) |>
   gt::tab_footnote(
