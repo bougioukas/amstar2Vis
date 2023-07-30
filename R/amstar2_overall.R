@@ -40,7 +40,7 @@ amstar2_overall <- function(data = data, r1 = 1, r2 = 0.75, table_size = 14, cap
 # create a table with the number of reviews and their percentages
   dt1 <- tb |>
     dplyr::select(overall) |>
-    dplyr::count(overall) |>
+    dplyr::count(overall, .drop = FALSE) |>
     dplyr::mutate("Percentage (%):" = round(n/sum(n)*100, digits = 1)) |>
     dplyr::rename("*Overall confidence:" = "overall",
                   "Number of reviews:" = "n")
