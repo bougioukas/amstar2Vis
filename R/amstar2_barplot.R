@@ -59,7 +59,7 @@ amstar_plot <- ggplot2::ggplot(amstar2_proportions, ggplot2::aes(x = prop, y = f
   ggplot2::labs(x = paste0("Percentage of SRs (%), N=",  nrow(amstar2_data)),
                 y = "Items of AMSTAR 2 checklist",
                 caption = "*Asterisk indicates a critical item (domain). \nPossible responses: Yes/No (items 1, 3, 5, 6, 10, 13, 14, 16); Yes/Partial Yes/No (items 2, 4, 7, 8, 9); Yes/No/No MA (items 11, 12, 15).
-                \nPICO, participant, intervention, comparison, outcome; RoB, Risk of bias; No MA, No meta-analysis conducted.
+                \nPICO, Participant, Intervention, Comparison, Outcome; RoB, Risk of bias; No MA, No meta-analysis conducted.
                 \nAMSTAR 2, A MeaSurement Tool to Assess Systematic Reviews 2 (Shea et al. 2017; doi: 10.1136/bmj.j4008)") +
   ggplot2::scale_fill_manual(values = colpalette) +
   ggplot2::guides(fill = ggplot2::guide_legend(reverse = TRUE, title = "Rating Scale")) +
