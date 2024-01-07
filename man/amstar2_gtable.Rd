@@ -16,9 +16,9 @@ A “gt” table object.
 It creates a nice-looking “gt” table that includes the item ratings and the overall confidence rating for each SR according to AMSTAR 2 guidelines.
 }
 \examples{
-library(amstar2)
+library(amstar2Vis)
 
-DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2"))
+DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2Vis"))
 
 amstar2_gtable(DATASET)
 }

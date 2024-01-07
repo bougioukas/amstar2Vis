@@ -1,4 +1,4 @@
-Package: amstar2
+Package: amstar2Vis
 Type: Package
 Title: Plots the AMSTAR barplot
 Version: 0.1.0

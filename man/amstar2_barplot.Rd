@@ -27,9 +27,9 @@ A “ggplot2”-based stacked barplot.
 It shows the distribution of ratings (“Yes”, “Partial Yes”, “No”, “No MA”) as percentages of SRs for each AMSTAR 2 item.
 }
 \examples{
-library(amstar2)
+library(amstar2Vis)
 
-DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2"))
+DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2Vis"))
 
 amstar2_barplot(DATASET)
 }

@@ -1,4 +1,4 @@
-#' @title Data for the amstar2 package
+#' @title Data for the amstar2Vis package
 #'
 #' @description Contains 495 systematic review assessments.
 #'

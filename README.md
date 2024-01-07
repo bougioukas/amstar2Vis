@@ -1,30 +1,30 @@
-# amstar2 <img src="man/figures/logo.png" align="right" height="139" />
+# amstar2Vis <img src="man/figures/logo.png" align="right" height="139" />
 A package for the AMSTAR 2 checklist.
 
 
 
 ## Overview
-It creates tables and presents graphical visualizations of the assessment of systematic reviews according to AMSTAR 2 checklist.
+It creates tables and presents graphical visualizations of the assessment of systematic reviews based on the items of AMSTAR 2 checklist.
 
 
 ## Installation
 
 ``` r
 # You can download the development version of the package from github:
-devtools::install_github('bougioukas/amstar2')
+devtools::install_github('bougioukas/amstar2Vis')
 ```
 
 Load the package:
 
 ``` r
-library(amstar2)
+library(amstar2Vis)
 ```
 
 
 Then read the example data:
 
 ``` r
-DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2"))
+DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2Vis"))
 
 ```
 

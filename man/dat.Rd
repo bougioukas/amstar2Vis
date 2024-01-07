@@ -3,7 +3,7 @@
 \docType{data}
 \name{dat}
 \alias{dat}
-\title{Data for the amstar2 package}
+\title{Data for the amstar2Vis package}
 \format{
 A dataframe.
 \describe{

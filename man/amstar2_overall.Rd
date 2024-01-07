@@ -30,9 +30,9 @@ A “ggplot2”-based graph combining a half-donut bar and an inset summary tabl
 Creates a summary graph with the AMSTAR 2 overall rating
 }
 \examples{
-library(amstar2)
+library(amstar2Vis)
 
-DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2"))
+DATASET <- readxl::read_excel(system.file("extdata", "sample_dat.xlsx", package = "amstar2Vis"))
 
 amstar2_overall(DATASET)
 }
