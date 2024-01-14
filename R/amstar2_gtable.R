@@ -49,8 +49,8 @@ amstar2_gtable <- function(data = data){
   amstar2_gt$`8. Description of included studies` <- factor(amstar2_gt$`8. Description of included studies`, levels = c("Yes", "Partial Yes", "No"))
   categories_fills8 = c("#3a5e8cFF", "#35b779", "#ffcf20FF")
 
-  levels(amstar2_gt$`9.* Assessment of RoB in icluded studies`) <- c("Yes", "Partial Yes", "No")
-  amstar2_gt$`9.* Assessment of RoB in icluded studies` <- factor(amstar2_gt$`9.* Assessment of RoB in icluded studies`, levels = c("Yes", "Partial Yes", "No"))
+  levels(amstar2_gt$`9.* Assessment of RoB in included studies`) <- c("Yes", "Partial Yes", "No")
+  amstar2_gt$`9.* Assessment of RoB in icluded studies` <- factor(amstar2_gt$`9.* Assessment of RoB in included studies`, levels = c("Yes", "Partial Yes", "No"))
   categories_fills9 = c("#3a5e8cFF", "#35b779", "#ffcf20FF")
 
   levels(amstar2_gt$`10. Funding sources`) <- c("Yes", "No")

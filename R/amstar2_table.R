@@ -25,7 +25,7 @@ amstar2_table <- function(data = data){
              "6. Duplicate data extraction",
              "7.* List of excluded studies and justification",
              "8. Description of included studies",
-             "9.* Assessment of RoB in icluded studies",
+             "9.* Assessment of RoB in included studies",
              "10. Funding sources",
              "11.* Use of appropriate statistical methods",
              "12. RoB impact on synthesized results",
