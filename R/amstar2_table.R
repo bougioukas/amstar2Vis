@@ -19,7 +19,7 @@ amstar2_table <- function(data = data){
 
   label <- c("1. PICO components",
              "2.* Pre-established protocol",
-             "3. Explanation of inlcuded studies' design",
+             "3. Explanation of included studies' design",
              "4.* Comprehensive search strategy",
              "5. Duplicate study selection",
              "6. Duplicate data extraction",
